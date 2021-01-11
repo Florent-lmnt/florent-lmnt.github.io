@@ -1,0 +1,108 @@
+.head {
+  background-color: #373737;
+  color: white;
+  font-family: "Raleway", serif;
+  font-size: 50px;
+  font-weight: 100;
+
+  .name {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .name:hover {
+    animation-name: hoverPop;
+    animation-duration: .4s;
+  }
+
+  b {
+    font-family: "Algerian", serif;
+    color: #21bfad;
+    font-weight: 900;
+  }
+}
+
+.sideR {
+  background-color: #fffd;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  top: 35%;
+  position: absolute;
+  width: 50vw;
+  right: 0;
+  max-width: 600px;
+  height: 350px;
+  -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+  clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+  padding: 24px;
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.sideC {
+  background-color: #F1F1F1;
+  width: 25%;
+  margin: 150px auto auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .me {
+    width: 50%;
+    border-radius: 25%;
+  }
+  .dev {
+    width: 50%;
+  }
+
+  span {
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    font-size: 25px;
+  }
+}
+
+.sideL {
+  background-color: #fffd;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  top: 35%;
+  position: absolute;
+  width: 50vw;
+  left: 0;
+  max-width: 600px;
+  height: 350px;
+  -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+  clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+  padding: 24px;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes hoverPop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.05);
+  }
+  66% {
+    transform: scale(.90);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
