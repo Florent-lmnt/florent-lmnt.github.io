@@ -366,7 +366,9 @@ header {
   align-items: center; }
   .sideC .me {
     width: 50%;
-    border-radius: 25%; }
+    border-radius: 25%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
   .sideC .dev {
     width: 50%; }
   .sideC .phrase_accroche {

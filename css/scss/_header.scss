@@ -43,6 +43,8 @@ header {
   .me {
     width: 50%;
     border-radius: 25%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
   .dev {
     width: 50%;
