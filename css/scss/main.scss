@@ -4,10 +4,13 @@
 @import "project";
 @import "school";
 @import "skills";
+@import "networks";
+@import "footer";
 
 html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   body {
-    background-color: #F1F1F1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -24,3 +27,129 @@ html {
 
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  padding: 36px 24px;
+}
+
+.titre-section {
+  font-family: "MADE Canvas", serif;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: center;
+  -webkit-text-stroke-width: 0.025em;
+  color: #707070;
+}
+
+.bouton {
+  text-align: center;
+  align-self: flex-end;
+  font-family: "MADE Canvas", serif;
+  font-size: 1.25em;
+  -webkit-text-stroke-width: 0.025em;
+  color: #FFFFFF;
+  background-color: #373737;
+  padding: 0.5em 1em;
+  margin-top: 1.5em;
+  width: 200px;
+  transition: 0.2s;
+}
+
+.bouton:hover {
+  background-color: #707070;
+}
+
+@media screen and (min-width: 768px) {
+
+  .sideL {
+    background-color: #fffd;
+    width: 33%;
+    margin-top: 300px;
+    float: left;
+    height: 350px;
+    -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .sideR {
+    background-color: #fffd;
+    width: 33%;
+    margin-top: 300px;
+    float: right;
+    height: 350px;
+    -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .titre-section {
+    text-align: left;
+  }
+
+  .realisations {
+    display: flex;
+    max-height: 700px;
+  }
+
+  // disposition des réalisations en 60/40
+  .realisations-gauche {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .realisations-droite {
+    width: 40%;
+  }
+
+  .real {
+    margin: 0;
+    padding: 36px 18px;
+  }
+
+  // disposition des parcours à gauche ou à droite selon leur nature
+  .parc {
+    width: 50%;
+    border: 0;
+  }
+  .diplome {
+    text-align: right;
+    align-self: flex-start;
+    padding: 0 24px 0 0;
+    border-right: 1px solid #707070;
+  }
+  .diplome:hover {
+    transform: translateX(-15px);
+  }
+  .pro {
+    align-self: flex-end;
+    border-left: 1px solid #707070;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  // grossissement global des polices sur grand écran
+  body {
+    font-size: 110%;
+  }
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sideC {
+    width: 33%;
+  }
+
+}

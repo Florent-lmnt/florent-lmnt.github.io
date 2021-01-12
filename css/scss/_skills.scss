@@ -50,3 +50,15 @@
     opacity: 1;
   }
 }
+
+.section-cv {
+  background-color: #F1F1F1;
+  a.bouton {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 1em auto;
+    width: fit-content;
+  }
+  margin-bottom: 80px;
+}

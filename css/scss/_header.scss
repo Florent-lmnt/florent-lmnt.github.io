@@ -1,5 +1,6 @@
 header {
   min-height: 100vh;
+  background-color: #F1F1F1;
 }
 
 .head {
@@ -87,25 +88,5 @@ header {
 }
 
 @media screen and(min-width: 900px) {
-  .sideL {
-    background-color: #fffd;
-    width: 33%;
-    margin-top: 300px;
-    float: left;
-    height: 350px;
-    -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-    clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-  }
 
-  .sideR {
-    background-color: #fffd;
-    width: 34%;
-    margin-top: 300px;
-    float: right;
-    height: 350px;
-    -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-    clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-    animation: 1s ease-out 0s 1 slideInFromRight;
-  }
 }
