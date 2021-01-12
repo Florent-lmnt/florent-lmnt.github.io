@@ -331,14 +331,17 @@ template {
   src: url("../fonts/Algerian.woff2") format("woff2");
   font-weight: 900;
   font-style: normal; }
+header {
+  min-height: 100vh; }
+
 .head {
   background-color: #373737;
   color: white;
   font-family: "Raleway", serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 100; }
   .head .name {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: auto; }
   .head .name:hover {
@@ -349,25 +352,14 @@ template {
     color: #21bfad;
     font-weight: 900; }
 
-.sideR {
-  background-color: #fffd;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  top: 35%;
-  position: absolute;
-  width: 50vw;
-  right: 0;
-  max-width: 600px;
-  height: 350px;
-  -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-  clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-  padding: 24px;
-  animation: 1s ease-out 0s 1 slideInFromRight; }
+.division-3 {
+  display: flex;
+  flex-direction: row; }
 
 .sideC {
   background-color: #F1F1F1;
-  width: 25%;
-  margin: 150px auto auto auto;
+  width: 100%;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -379,22 +371,9 @@ template {
   .sideC span {
     font-family: "Raleway", serif;
     font-weight: 300;
-    font-size: 25px; }
-
-.sideL {
-  background-color: #fffd;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  top: 35%;
-  position: absolute;
-  width: 50vw;
-  left: 0;
-  max-width: 600px;
-  height: 350px;
-  -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-  clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-  padding: 24px;
-  animation: 1s ease-out 0s 1 slideInFromLeft; }
+    font-size: 25px;
+    text-align: center;
+    padding: 10px; }
 
 @keyframes hoverPop {
   0%, 100% {
@@ -413,8 +392,96 @@ template {
     transform: translateX(100%); }
   100% {
     transform: translateX(0); } }
+@media screen and (min-width: 900px) {
+  .sideL {
+    background-color: #fffd;
+    width: 33%;
+    margin-top: 300px;
+    float: left;
+    height: 350px;
+    -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    animation: 1s ease-out 0s 1 slideInFromLeft; }
+
+  .sideR {
+    background-color: #fffd;
+    width: 34%;
+    margin-top: 300px;
+    float: right;
+    height: 350px;
+    -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    animation: 1s ease-out 0s 1 slideInFromRight; } }
+.project {
+  background-color: #FFFFFF; }
+
+.sub-project {
+  margin: auto;
+  padding: 35px 10px; }
+  .sub-project h2 {
+    font-family: "MADE Canvas", sans-serif;
+    font-weight: 900;
+    font-size: 35px;
+    color: #707070;
+    text-align: center;
+    -webkit-text-stroke-width: 0.025em; }
+
+.real {
+  margin: 36px 0; }
+
+.real_img {
+  width: 35%;
+  float: left;
+  margin: 0 20px 20px 0;
+  position: relative;
+  z-index: 2; }
+
+.real_titre {
+  position: relative;
+  padding: 8px 4%;
+  line-height: 1;
+  z-index: 1;
+  clip-path: polygon(58px 0, 100% 0, calc(100% - 8px) 100%, 50px 100%);
+  background-color: #373737;
+  color: #FFF;
+  font-family: "MADE Canvas", serif;
+  font-size: 1.25em;
+  text-align: center;
+  -webkit-text-stroke-width: 0.025em; }
+
+.real_desc {
+  margin: 16px 0;
+  font-family: "Raleway", serif;
+  font-weight: 300;
+  font-size: 20px; }
+
+.real_lien::before {
+  content: '> '; }
+
+.real_lien {
+  display: block;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "MADE Canvas", serif;
+  color: #707070;
+  -webkit-text-stroke-width: 0.025em;
+  margin-right: 24px;
+  transition: 0.2s; }
+
+.real_lien:hover {
+  color: #21bfad;
+  margin-right: 12px;
+  cursor: pointer; }
+
+.clearfix {
+  clear: both; }
+
 html body {
-  background-color: #F1F1F1; }
+  background-color: #F1F1F1;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
 html a {
   text-decoration: none;
   color: white; }

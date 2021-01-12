@@ -1,12 +1,16 @@
+header {
+  min-height: 100vh;
+}
+
 .head {
   background-color: #373737;
   color: white;
   font-family: "Raleway", serif;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 100;
 
   .name {
-    width: 50%;
+    width: 100%;
     text-align: center;
     margin: auto;
   }
@@ -23,26 +27,15 @@
   }
 }
 
-.sideR {
-  background-color: #fffd;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  top: 35%;
-  position: absolute;
-  width: 50vw;
-  right: 0;
-  max-width: 600px;
-  height: 350px;
-  -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-  clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
-  padding: 24px;
-  animation: 1s ease-out 0s 1 slideInFromRight;
+.division-3 {
+  display: flex;
+  flex-direction: row;
 }
 
 .sideC {
   background-color: #F1F1F1;
-  width: 25%;
-  margin: 150px auto auto auto;
+  width: 100%;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,23 +51,9 @@
     font-family: "Raleway", serif;
     font-weight: 300;
     font-size: 25px;
+    text-align: center;
+    padding: 10px;
   }
-}
-
-.sideL {
-  background-color: #fffd;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  top: 35%;
-  position: absolute;
-  width: 50vw;
-  left: 0;
-  max-width: 600px;
-  height: 350px;
-  -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-  clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
-  padding: 24px;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 @keyframes hoverPop {
@@ -104,5 +83,29 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media screen and(min-width: 900px) {
+  .sideL {
+    background-color: #fffd;
+    width: 33%;
+    margin-top: 300px;
+    float: left;
+    height: 350px;
+    -webkit-clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    clip-path: polygon(100% 70%, 100% 0, 0 30%, 0 100%);
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .sideR {
+    background-color: #fffd;
+    width: 34%;
+    margin-top: 300px;
+    float: right;
+    height: 350px;
+    -webkit-clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    clip-path: polygon(0 70%, 0 0, 100% 30%, 100% 100%);
+    animation: 1s ease-out 0s 1 slideInFromRight;
   }
 }
