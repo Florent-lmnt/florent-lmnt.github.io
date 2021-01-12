@@ -1,0 +1,76 @@
+.section-parcours {
+  background-color: #F1F1F1;
+}
+
+.container {
+  padding: 35px 25px;
+}
+
+.titre-section {
+  font-family: "MADE Canvas", sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  color: #707070;
+  text-align: center;
+  -webkit-text-stroke-width: 0.025em;
+}
+
+.parcours {
+  display: flex;
+  flex-direction: column;
+  ul {
+    display: inline-block;
+  }
+}
+
+.parc {
+  margin: 18px 0;
+  padding-left: 24px;
+  border-left: 1px solid #373737;
+  transition: 0.2s;
+}
+
+.parc:hover {
+  transform: translateX(15px);
+}
+
+.parc_titre {
+  font-family: "MADE Canvas", serif;
+  font-size: 1.375em;
+  font-weight: normal;
+  -webkit-text-stroke-width: 0.025em;
+  margin-bottom: 0;
+}
+
+.parc_date {
+  font-family: "MADE Canvas", serif;
+  -webkit-text-stroke-width: 0.025em;
+  margin-bottom: 0;
+}
+
+.parc_lieu {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.parc_desc {
+  margin-top: 0.5em;
+}
+
+.diplome {
+  .parc_deco::before, .parc_deco::after {
+    background-color: #21bfad;
+  }
+  .parc_titre, .parc_desc {
+    color: #21bfad;
+  }
+}
+
+.pro {
+  .parc_deco::before, .parc_deco::after {
+    background-color: #373737;
+  }
+  .parc_date {
+    color: #21bfad;
+  }
+}

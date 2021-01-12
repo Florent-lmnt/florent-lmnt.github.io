@@ -477,6 +477,107 @@ header {
 .clearfix {
   clear: both; }
 
+.section-parcours {
+  background-color: #F1F1F1; }
+
+.container {
+  padding: 35px 25px; }
+
+.titre-section {
+  font-family: "MADE Canvas", sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  color: #707070;
+  text-align: center;
+  -webkit-text-stroke-width: 0.025em; }
+
+.parcours {
+  display: flex;
+  flex-direction: column; }
+  .parcours ul {
+    display: inline-block; }
+
+.parc {
+  margin: 18px 0;
+  padding-left: 24px;
+  border-left: 1px solid #373737;
+  transition: 0.2s; }
+
+.parc:hover {
+  transform: translateX(15px); }
+
+.parc_titre {
+  font-family: "MADE Canvas", serif;
+  font-size: 1.375em;
+  font-weight: normal;
+  -webkit-text-stroke-width: 0.025em;
+  margin-bottom: 0; }
+
+.parc_date {
+  font-family: "MADE Canvas", serif;
+  -webkit-text-stroke-width: 0.025em;
+  margin-bottom: 0; }
+
+.parc_lieu {
+  font-weight: 200;
+  margin-bottom: 0; }
+
+.parc_desc {
+  margin-top: 0.5em; }
+
+.diplome .parc_deco::before, .diplome .parc_deco::after {
+  background-color: #21bfad; }
+.diplome .parc_titre, .diplome .parc_desc {
+  color: #21bfad; }
+
+.pro .parc_deco::before, .pro .parc_deco::after {
+  background-color: #373737; }
+.pro .parc_date {
+  color: #21bfad; }
+
+.section-competences {
+  background-color: #FFFFFF; }
+
+.bloc-competences {
+  padding: 1.5em 1em 0 1em;
+  border-top: 1px solid #707070;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.bcomp_titre {
+  font-family: "MADE Canvas", serif;
+  -webkit-text-stroke-width: 0.025em;
+  font-weight: normal;
+  width: fit-content;
+  position: relative;
+  top: 0.75em;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  background-color: #FFF; }
+
+.comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6em; }
+  .comp svg {
+    width: 48px;
+    height: 48px;
+    filter: grayscale(1);
+    margin-bottom: 2em;
+    transition: 0.2s; }
+  .comp span {
+    opacity: 0;
+    position: absolute;
+    transform: translateY(52px);
+    transition: 0.2s; }
+
+.comp:hover svg {
+  filter: grayscale(0); }
+.comp:hover span {
+  opacity: 1; }
+
 html body {
   background-color: #F1F1F1;
   width: 100%;
